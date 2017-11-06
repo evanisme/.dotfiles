@@ -72,6 +72,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'majutsushi/tagbar'
     Plug 'w0rp/ale'
     Plug 'Valloric/YouCompleteMe'
+    Plug 'jiangmiao/auto-pairs'
     Plug 'vim-python/python-syntax'
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'

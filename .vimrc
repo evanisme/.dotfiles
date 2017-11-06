@@ -60,6 +60,7 @@ filetype plugin on             " load plugin files for specific file types
 filetype indent on             " load indent file for specific file types
 syntax enable                  " syntax highlighting
 
+" use xclip for copy and paste
 vmap <F5> :!xclip -f -sel clip<CR>
 map <F6> :-1r !xclip -o -sel clip<CR>
 

@@ -60,6 +60,9 @@ filetype plugin on             " load plugin files for specific file types
 filetype indent on             " load indent file for specific file types
 syntax enable                  " syntax highlighting
 
+vmap <F5> :!xclip -f -sel clip<CR>
+map <F6> :-1r !xclip -o -sel clip<CR>
+
 " load plugins
 call plug#begin('~/.vim/plugged')
     Plug 'yuttie/comfortable-motion.vim'

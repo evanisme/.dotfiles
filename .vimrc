@@ -30,6 +30,7 @@ set visualbell                 " disable bell in Windows Linux Subsystem
 set t_vb=                      " visual bell effect to nothing
 set backspace=2                " same as backspace=indent,eol,start (backspace over autoindent, line breaks, start of insert)
 set splitbelow
+set colorcolumn=80
 
 " saftey
 set history=500                " number of lines that are remembered
@@ -66,7 +67,6 @@ map <F6> :-1r !xclip -o -sel clip<CR>
 
 " load plugins
 call plug#begin('~/.vim/plugged')
-    Plug 'yuttie/comfortable-motion.vim'
     Plug 'mbbill/undotree'
     Plug 'scrooloose/nerdtree'
     Plug 'majutsushi/tagbar'
@@ -92,7 +92,7 @@ augroup nerdtree
 augroup END
 
 " plugin 'majutsushi/tagbar'
-" install ctags (https://ctags.io/)
+" install ctags (https://github.com/universal-ctags/ctags.git)
 nnoremap <F9> :TagbarToggle<CR>
 
 " plugin 'w0rp/ale'
@@ -104,18 +104,20 @@ nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
 
 " plugin 'Valloric/YouCompleteMe'
-" install dependencies (https://github.com/Valloric/YouCompleteMe#installation)
-" run ~/.vim/plugged/YouCompleteMe/install.py
+" eopkg install -c system.devel
+" ~/.vim/plugged/YouCompleteMe/install.py
 let g:ycm_autoclose_preview_window_after_completion = 1
 
 " plugin 'vim-python/python-syntax'
 let g:python_highlight_all = 1
 
 " plugin 'vim-airline/vim-airline'
-" install fonts (https://github.com/ryanoasis/nerd-fonts)
+" install fonts for powerline symbols (https://github.com/ryanoasis/nerd-fonts.git)
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
 let g:airline_powerline_fonts = 1
+
+" plugin 'vim-airline/vim-airline-themes'
 let g:airline_theme = 'raven'
 
 " plugin 'zakj/vim-mourning'

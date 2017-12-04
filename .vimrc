@@ -49,11 +49,11 @@ set t_ut=                      " disable Background Color Erase by clearing term
 " tabs
 set expandtab                  " use spaces instead of tabs
 set smarttab                   " <TAB> key inserts indentation according to 'shiftwidth' at the beginning of the line
-set tabstop=4                  " width of TAB character
-set shiftwidth=4               " size of an indent
-set softtabstop=4              " affects what happens when pressing <TAB> or <BS> keys
+set tabstop=2                  " width of TAB character
+set shiftwidth=2               " size of an indent
+set softtabstop=2              " affects what happens when pressing <TAB> or <BS> keys
 
-autocmd Filetype ruby setlocal tabstop=2 shiftwidth=2 softtabstop=2
+autocmd Filetype python setlocal tabstop=4 shiftwidth=4 softtabstop=4
 
 " filetype detection
 filetype on                    " filetype detection
@@ -73,10 +73,13 @@ call plug#begin('~/.vim/plugged')
     Plug 'w0rp/ale'
     Plug 'Valloric/YouCompleteMe'
     Plug 'jiangmiao/auto-pairs'
+    Plug 'vim-ruby/vim-ruby'
+    Plug 'tpope/vim-rails'
     Plug 'vim-python/python-syntax'
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
     Plug 'zakj/vim-mourning'
+    Plug 'joshdick/onedark.vim'
 call plug#end()
 
 " plugin 'mbbill/undotree'
@@ -88,7 +91,6 @@ augroup nerdtree
     autocmd!
     autocmd StdinReadPre * let s:std_in = 1
     autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
-    autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 augroup END
 
 " plugin 'majutsushi/tagbar'
@@ -104,7 +106,6 @@ nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
 
 " plugin 'Valloric/YouCompleteMe'
-" eopkg install -c system.devel
 " ~/.vim/plugged/YouCompleteMe/install.py
 let g:ycm_autoclose_preview_window_after_completion = 1
 
@@ -118,7 +119,12 @@ let g:airline#extensions#tabline#fnamemod = ':t'
 let g:airline_powerline_fonts = 1
 
 " plugin 'vim-airline/vim-airline-themes'
-let g:airline_theme = 'raven'
+"let g:airline_theme = 'raven'
 
 " plugin 'zakj/vim-mourning'
-colorscheme mourning
+"colorscheme mourning
+
+" plugin 'joshdick/onedark.vim'
+let g:onedark_termcolors = 256
+let g:onedark_terminal_italics = 1
+colorscheme onedark

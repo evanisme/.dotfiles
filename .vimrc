@@ -79,7 +79,6 @@ call plug#begin('~/.vim/plugged')
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
     Plug 'zakj/vim-mourning'
-    Plug 'joshdick/onedark.vim'
 call plug#end()
 
 " plugin 'mbbill/undotree'
@@ -116,15 +115,7 @@ let g:python_highlight_all = 1
 " install fonts for powerline symbols (https://github.com/ryanoasis/nerd-fonts.git)
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
-let g:airline_powerline_fonts = 1
+"let g:airline_powerline_fonts = 1
 
 " plugin 'vim-airline/vim-airline-themes'
-"let g:airline_theme = 'raven'
-
-" plugin 'zakj/vim-mourning'
-"colorscheme mourning
-
-" plugin 'joshdick/onedark.vim'
-let g:onedark_termcolors = 256
-let g:onedark_terminal_italics = 1
-colorscheme onedark
+let g:airline_theme = 'raven'

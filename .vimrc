@@ -1,4 +1,4 @@
-"set nocompatible               " ensure 'nocompatible' since VIM behavior can vary
+set nocompatible               " ensure 'nocompatible' since VIM behavior can vary
 set autoread                   " auto read when a file is changed from the outside
 set hidden                     " buffer is hidden when abandoned
 set lazyredraw                 " don't redraw while executing macros (performance, airline bug)
@@ -78,7 +78,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'vim-python/python-syntax'
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
-    Plug 'zakj/vim-mourning'
+    "Plug 'zakj/vim-mourning'
 call plug#end()
 
 " plugin 'mbbill/undotree'
@@ -113,9 +113,9 @@ let g:python_highlight_all = 1
 
 " plugin 'vim-airline/vim-airline'
 " install fonts for powerline symbols (https://github.com/ryanoasis/nerd-fonts.git)
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#fnamemod = ':t'
+"let g:airline#extensions#tabline#enabled = 1
+"let g:airline#extensions#tabline#fnamemod = ':t'
 "let g:airline_powerline_fonts = 1
 
 " plugin 'vim-airline/vim-airline-themes'
-let g:airline_theme = 'raven'
+let g:airline_theme = 'monochrome'

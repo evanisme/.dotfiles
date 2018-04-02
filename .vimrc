@@ -1,4 +1,4 @@
-set nocompatible               " ensure 'nocompatible' since VIM behavior can vary
+"set nocompatible               " ensure 'nocompatible' since VIM behavior can vary
 set autoread                   " auto read when a file is changed from the outside
 set hidden                     " buffer is hidden when abandoned
 set lazyredraw                 " don't redraw while executing macros (performance, airline bug)
@@ -67,18 +67,18 @@ map <F6> :-1r !xclip -o -sel clip<CR>
 
 " load plugins
 call plug#begin('~/.vim/plugged')
-    Plug 'mbbill/undotree'
-    Plug 'scrooloose/nerdtree'
-    Plug 'majutsushi/tagbar'
-    Plug 'w0rp/ale'
-    Plug 'Valloric/YouCompleteMe'
-    Plug 'jiangmiao/auto-pairs'
-    Plug 'vim-ruby/vim-ruby'
-    Plug 'tpope/vim-rails'
-    Plug 'vim-python/python-syntax'
-    Plug 'vim-airline/vim-airline'
-    Plug 'vim-airline/vim-airline-themes'
-    "Plug 'zakj/vim-mourning'
+  Plug 'mbbill/undotree'
+  Plug 'scrooloose/nerdtree'
+  Plug 'majutsushi/tagbar'
+  Plug 'w0rp/ale'
+  Plug 'Valloric/YouCompleteMe'
+  Plug 'jiangmiao/auto-pairs'
+  Plug 'vim-ruby/vim-ruby'
+  Plug 'tpope/vim-rails'
+  Plug 'vim-python/python-syntax'
+  Plug 'vim-airline/vim-airline'
+  Plug 'vim-airline/vim-airline-themes'
+  Plug 'zakj/vim-mourning'
 call plug#end()
 
 " plugin 'mbbill/undotree'
@@ -87,9 +87,9 @@ nnoremap <F7> :UndotreeToggle<CR>
 " plugin 'scrooloose/nerdtree'
 nnoremap <F8> :NERDTreeToggle<CR>
 augroup nerdtree
-    autocmd!
-    autocmd StdinReadPre * let s:std_in = 1
-    autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
+  autocmd!
+  autocmd StdinReadPre * let s:std_in = 1
+  autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
 augroup END
 
 " plugin 'majutsushi/tagbar'
@@ -118,4 +118,7 @@ let g:python_highlight_all = 1
 "let g:airline_powerline_fonts = 1
 
 " plugin 'vim-airline/vim-airline-themes'
-let g:airline_theme = 'monochrome'
+let g:airline_theme = 'raven'
+
+" plugin 'zakj/vim-mourning'
+colorscheme mourning

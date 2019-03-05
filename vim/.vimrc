@@ -3,7 +3,7 @@ set autoread                   " auto read when a file is changed from the outsi
 set hidden                     " buffer is hidden when abandoned
 set lazyredraw                 " don't redraw while executing macros (performance, airline bug)
 set number                     " display line numbers
-set cursorline                 " highlight current line (slow)
+"set cursorline                 " highlight current line (slow)
 set ruler                      " always show current position
 set noshowmode                 " disable Insert, Replace, and Visual mode message on last line
 set ignorecase                 " case insensitive when searching
